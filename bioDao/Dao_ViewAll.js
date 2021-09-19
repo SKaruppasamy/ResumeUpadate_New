@@ -12,5 +12,4 @@ Bio.get(function (err, bio) {
         data: bio       
     });
 });
-
 };
