@@ -1,8 +1,8 @@
 let router = require('express').Router();
 //For creating new bio
-Dao_New = require('../bioDao/Dao_New.js');
+bioService_New = require('../bioService/bioService_New.js');
 exports.add = function (err,bio) {
     
-    Dao_New.Dao_add(err,bio);
+    bioService_New.bioService_add(err,bio);
     if (err) return console.error(err); 
 };

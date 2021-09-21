@@ -1,8 +1,8 @@
 let router = require('express').Router();
-Dao_Update = require('../bioDao/Dao_Update.js');
+bioService_Update = require('../bioService/bioService_Update.js');
 // Update Bio
 exports.update = function (err,bio) {
-    Dao_Update.Dao_update(err,bio);
+    bioService_Update.bioService_update(err,bio);
     if (err) return console.error(err); 
 };
 

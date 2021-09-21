@@ -1,9 +1,9 @@
 let router = require('express').Router();
 
 //For index
-Dao_ViewAll= require('../bioDao/Dao_ViewAll.js');
+bioService_ViewAll= require('../bioService/bioService_ViewAll.js');
 exports.index = function(err,bio)
  {
-     Dao_ViewAll.Dao_index(err,bio);
+     bioService_ViewAll.bioService_index(err,bio);
     if (err) return console.error(err); 
 };

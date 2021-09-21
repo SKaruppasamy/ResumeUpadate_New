@@ -2,7 +2,7 @@ Bio = require('../bioModel/bioModels.js');
 exports.Dao_update = function (req, res) {
     Bio.findById(req.params.bio_id, function (err, bio) {
         if (err)
-            res.send(err);
+        res.send(err);
         bio.FirstName = req.body.FirstName ? req.body.FirstName : bio.FirstName;
         bio.LastName = req.body.LastName ? req.body.LastName : bio.LastName;
         bio.Email = req.body.Email;
