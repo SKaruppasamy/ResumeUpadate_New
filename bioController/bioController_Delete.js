@@ -1,12 +1,9 @@
-//Import Bio Model
-Bio = require('../Model/bioModel');
-// Delete Bio
-
-
-exports.delete = function (req, res) {
-Delete = require('../bioDao/Dao_Delete.js'); 
-router.route('/bio/:bio_id')
-    .delete(Delete.delete);
+let router = require('express').Router();
+//Import Bio dao
+Dao_Delete = require('../bioDao/Dao_Delete.js'); 
+exports.Delete = function (err, bio) {
+    Dao_Delete.Dao_Delete(err,bio);
+    if (err) return console.error(err); 
 };
-//Export API routes
-module.exports = router;
+
+     

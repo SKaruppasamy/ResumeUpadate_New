@@ -1,13 +1,9 @@
-//Import Bio Model
-Bio = require('../Model/bioModel');
+let router = require('express').Router();
 
 //For index
-exports.index = function(req,res){
- ViewAll= require('../bioDao/Dao_ViewAll.js');
- 
- router.route('/bio')
-    .get(ViewAll.index)
+Dao_ViewAll= require('../bioDao/Dao_ViewAll.js');
+exports.index = function(err,bio)
+ {
+     Dao_ViewAll.Dao_index(err,bio);
+    if (err) return console.error(err); 
 };
-
-//Export API routes
-module.exports = router;

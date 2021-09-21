@@ -31,7 +31,7 @@ console.log("Error connecting db");
 else
 console.log("DB Connected Successfully");
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8083;
 
 app.get('/', (req, res) => res.send('Welcome to Naukri'));
 

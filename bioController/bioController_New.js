@@ -1,12 +1,8 @@
-//Import Bio Model
-Bio = require('../Model/bioModel');
+let router = require('express').Router();
 //For creating new bio
-//
-exports.add = function (req, res) {
-New = require('../bioDao/Dao_New.js');
-
-router.route('/bio')
-    .post(New.add);
+Dao_New = require('../bioDao/Dao_New.js');
+exports.add = function (err,bio) {
+    
+    Dao_New.Dao_add(err,bio);
+    if (err) return console.error(err); 
 };
-//Export API routes
-module.exports = router;

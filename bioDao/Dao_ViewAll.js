@@ -1,5 +1,5 @@
-Bio = require('../Model/bioModel.js');
-exports.index = function(req,res){
+//Bio = require('../bioModel/bioModels.js');
+exports.Dao_index= function(req,res){
 Bio.get(function (err, bio) {
     if (err)
         res.json({

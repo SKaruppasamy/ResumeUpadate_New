@@ -1,14 +1,9 @@
-//Import Bio Model
-Bio = require('../Model/bioModel');
-
-
-exports.view = function (req, res) {
- 
-  // View Bio
-View = require('../bioDao/Dao_View.js');
-router.route('/bio/:bio_id')
-    .get(View.view)
-
+let router = require('express').Router();
+ // View Bio
+Dao_View = require('../bioDao/Dao_View.js');
+exports.view = function (err, bio) {
+  Dao_View.Dao_view(err,bio);
+ if (err) return console.error(err); 
+   
 };
-//Export API routes
-module.exports = router;
+

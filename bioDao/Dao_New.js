@@ -1,5 +1,5 @@
-Bio = require('../Model/bioModel.js');
-exports.add = function (req, res) {
+Bio = require('../bioModel/bioModels.js');
+exports.Dao_add = function (req, res) {
 var bio = new Bio();
 bio.FirstName = req.body.FirstName? req.body.FirstName: bio.FirstName;
 bio.LastName = req.body.LastName? req.body.LastName: bio.LastName;

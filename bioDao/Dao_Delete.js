@@ -1,5 +1,5 @@
-Bio = require('../Model/bioModel.js');
-exports.delete = function (req, res) {
+Bio = require('../bioModel/bioModels.js');
+exports.Dao_Delete = function (req, res) {
     Bio.deleteOne({
         _id: req.params.bio_id
     }, function (err, contact) {

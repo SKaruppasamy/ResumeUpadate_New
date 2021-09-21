@@ -1,5 +1,5 @@
-Bio = require('../Model/bioModel.js');
-exports.view = function (req, res) {
+Bio = require('../bioModel/bioModels.js');
+exports.Dao_view = function (req, res) {
     Bio.findById(req.params.bio_id, function (err, bio) {
         if (err)
             res.send(err);
